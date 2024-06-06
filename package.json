@@ -5,6 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
+    "knex": "node --import tsx ./node_modules/.bin/knex",
+    "migrate": "tsx ./node_modules/knex/bin/cli.js --knexfile knexfile.ts migrate:latest",
+    "migrate:make": "tsx ./node_modules/knex/bin/cli.js --knexfile knexfile.ts migrate:make",
+    "migrate:rollback": "tsx ./node_modules/knex/bin/cli.js --knexfile knexfile.ts migrate:rollback",
     "lint": "eslint src --ext .ts"
   },
   "keywords": [],
@@ -18,6 +22,8 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
-    "fastify": "^4.27.0"
+    "fastify": "^4.27.0",
+    "knex": "^3.1.0",
+    "sqlite3": "^5.1.7"
   }
 }
