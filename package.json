@@ -9,7 +9,8 @@
     "migrate": "tsx ./node_modules/knex/bin/cli.js --knexfile knexfile.ts migrate:latest",
     "migrate:make": "tsx ./node_modules/knex/bin/cli.js --knexfile knexfile.ts migrate:make",
     "migrate:rollback": "tsx ./node_modules/knex/bin/cli.js --knexfile knexfile.ts migrate:rollback",
-    "lint": "eslint src --ext .ts"
+    "lint": "eslint src --ext .ts",
+    "test": "vitest"
   },
   "keywords": [],
   "author": "",
