@@ -10,6 +10,7 @@
     "migrate:make": "tsx ./node_modules/knex/bin/cli.js --knexfile knexfile.ts migrate:make",
     "migrate:rollback": "tsx ./node_modules/knex/bin/cli.js --knexfile knexfile.ts migrate:rollback",
     "lint": "eslint src --ext .ts",
+    "build": "tsup src --out-dir build",
     "test": "vitest"
   },
   "keywords": [],
@@ -21,6 +22,7 @@
     "@types/supertest": "^6.0.2",
     "eslint": "^8.57.0",
     "supertest": "^7.0.0",
+    "tsup": "^8.1.0",
     "tsx": "^4.11.2",
     "typescript": "^5.4.5",
     "vitest": "^1.6.0"
